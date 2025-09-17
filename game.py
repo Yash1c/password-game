@@ -379,7 +379,6 @@ def função8(senha_anterior):
             break
         
 # Função 9: Números romanos
-# Função 9: Números romanos
 def função9(senha_anterior):
     while True:
         print("==================================")
@@ -518,8 +517,6 @@ def função_final(senha_anterior):
             time.sleep(1)
             vitoria(nova_senha)
             break
-
-
 
 def vitoria(senha_final):
     print("==================================")
