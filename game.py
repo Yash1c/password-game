@@ -579,24 +579,20 @@ def regra9(senha_anterior):
             print("⚠️ A senha deve conter 3 dígitos em sequência crescente (ex: '123', '456')!")
             print("==================================\n")
             continue
+            
+        print(f"Senha Atual: {nova_senha}")
+        print("==================================\n")
+        time.sleep(1)
+        regra10(nova_senha)
+        break
 
-        # Verifica se tem acento
-        acentuados = "áéíóúàèìòùâêîôûãõçÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÇ"
-        tem_acentuado = any(char in acentuados for char in nova_senha)
-        if not tem_acentuado:
-            print("⚠️ Ops!!! A senha deve conter pelo menos um caractere acentuado.")
-            print("==================================\n")
-            continue
-        else:
-            print(f"Senha atual: {nova_senha}")
-            print("==================================\n")
-            time.sleep(1)
-            função9(nova_senha)
-            break
-        
-# Função 9: Números romanos
-# Função 9: Números romanos
-def função9(senha_anterior):
+def regra10(senha_anterior):
+    limpar_tela()
+    print("🎉 DÉCIMA REGRA! Você é lendário!")
+    animacao_carregamento("Isso está ficando épico", 3)
+    print("================================\n")
+    print(f"Senha anterior: {senha_anterior}\n")
+    
     while True:
         print("10º Regra: A senha deve conter um ANAGRAMA de '2024' ou '2025'!")
         print("Exemplo: '2204', '4220', '2502' etc.\n")
@@ -685,35 +681,5 @@ def regra12(senha_anterior):
         print("Obrigado por jogar! 🏆")
         break
 
-
-
-def vitoria(senha_final):
-    print("==================================")
-    animacao_carregamento("Verificando senha")
-    print("==================================")
-    print("PARABÉNS! Você conseguiu criar uma senha segura!")
-    print(f"SENHA FINAL: {senha_final}")
-    print("==================================\n")
-    
-    while True:
-        print("Deseja jogar novamente?")
-        print("1 - Sim")
-        print("2 - Não")
-        resposta = input("Resposta: ")
-        if resposta == "1":
-            print("==================================\n")
-            animacao_carregamento("Reiniciando jogo")
-            inicio()
-            break
-        elif resposta == "2":
-            print("==================================\n")
-            print("Obrigado por jogar! Até a próxima!")
-            print("==================================\n")
-            exit()
-        else:
-            print("==================================\n")
-            print("Resposta inválida, tente novamente!")
-            print("==================================\n")
-
-# Inicia o jogo
-inicio()
+if __name__ == "__main__":
+    inicio_jogo()
